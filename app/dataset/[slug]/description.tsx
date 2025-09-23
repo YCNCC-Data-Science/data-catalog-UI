@@ -1,10 +1,10 @@
 "use client";
+
 import { Tags } from "@/components/feedstock/tags";
-import { Feedstock } from "@/types/types";
-//import { Column, Row } from '@carbonplan/components'
+import { Dataset } from "@/types/types";
 import { Box, Text } from "theme-ui";
 
-export const DatasetDescription: React.FC<{ feedstock: Feedstock }> = ({
+export const DatasetDescription: React.FC<{ feedstock: Dataset }> = ({
   feedstock,
 }) => {
   return (
