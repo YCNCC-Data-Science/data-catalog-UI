@@ -1,8 +1,15 @@
 import React from "react";
-import { Box } from "theme-ui";
+import { ReactNode } from "react";
+import { Box, ThemeUIStyleObject } from "theme-ui";
 import { transparentize } from "@theme-ui/color";
 
-const Badge = ({ sx: customSx, children, ...props }) => {
+interface BadgeProps {
+  sx?: ThemeUIStyleObject & { color?: string };
+  children: ReactNode;
+  [key: string]: any;
+}
+
+const Badge: React.FC<BadgeProps> = ({ sx: customSx, children, ...props }) => {
   const color = customSx?.color ?? "primary";
   return (
     <Box
