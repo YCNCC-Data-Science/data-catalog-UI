@@ -19,7 +19,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({ url, color, tags }) => {
     >
       <Box
         as="img"
-        // @ts-expect-error
+        // @ts-expect-error theme-ui doesn’t officially type-check as props
         src={url}
         sx={{
           position: "absolute",

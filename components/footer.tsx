@@ -24,7 +24,7 @@ export const Footer = () => {
       >
         <IconButton
           as="a"
-          // @ts-expect-error
+          // @ts-expect-error theme-ui doesn’t officially type-check as props
           href="https://www.linkedin.com/company/ycncc"
           sx={{ mx: 2 }}
         >
@@ -33,7 +33,7 @@ export const Footer = () => {
 
         <IconButton
           as="a"
-          // @ts-expect-error
+          // @ts-expect-error theme-ui doesn’t officially type-check as props
           href="https://github.com/YCNCC-Data-Science"
           sx={{ mx: 2 }}
         >
@@ -42,7 +42,7 @@ export const Footer = () => {
 
         <IconButton
           as="a"
-          // @ts-expect-error
+          // @ts-expect-error theme-ui doesn’t officially type-check as props
           href="https://naturalcarboncapture.yale.edu/"
           sx={{ mx: 2 }}
         >

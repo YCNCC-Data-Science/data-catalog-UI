@@ -18,7 +18,7 @@ export const DatasetHeader: React.FC<{ feedstock: Dataset }> = ({
     >
       <Box
         as="img"
-        // @ts-expect-error
+        // @ts-expect-error theme-ui doesn’t officially type-check as props
         src={feedstock.thumbnail}
         alt={`${feedstock.title} thumbnail`}
         sx={{

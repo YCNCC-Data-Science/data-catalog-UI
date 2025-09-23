@@ -16,7 +16,7 @@ export const ModelHeader: React.FC<{ model: Model }> = ({ model }) => {
     >
       <Box
         as="img"
-        // @ts-expect-error
+        // @ts-expect-error theme-ui doesn’t officially type-check as props
         src={model.thumbnail}
         alt={`${model.title} thumbnail`}
         sx={{
