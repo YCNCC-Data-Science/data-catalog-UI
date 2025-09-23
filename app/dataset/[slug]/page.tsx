@@ -1,6 +1,6 @@
 import { getDatasets } from "@/utils/get-datasets";
 import { Metadata } from "next";
-//import { notFound } from 'next/navigation'
+import { notFound } from "next/navigation";
 import ClientDatasetPage from "./client-dataset-page";
 
 export async function generateStaticParams() {
@@ -10,7 +10,7 @@ export async function generateStaticParams() {
   }));
 }
 
-async function getFeedstock(slug: string, catalog?: string) {
+async function getDataset(slug: string, catalog?: string) {
   const feedstocks = await getDatasets(catalog);
   return feedstocks.find((f) => f.slug === slug);
 }
@@ -34,11 +34,11 @@ export async function generateMetadata({
 export default async function FeedstockPage({ params, searchParams }: Props) {
   const { slug } = await params;
   const { catalog } = await searchParams;
-  const feedstock = await getFeedstock(slug, catalog);
+  const feedstock = await getDataset(slug, catalog);
 
-  //if (!feedstock) {
-  //  notFound()
-  // }
+  if (!feedstock) {
+    notFound();
+  }
 
   return <ClientDatasetPage feedstock={feedstock} />;
 }
