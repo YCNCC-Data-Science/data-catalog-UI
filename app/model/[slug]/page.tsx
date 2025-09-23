@@ -1,6 +1,6 @@
 import { getModels } from "@/utils/get-models";
 import { Metadata } from "next";
-//import { notFound } from 'next/navigation'
+import { notFound } from "next/navigation";
 import ClientModelPage from "./client-model-page";
 
 export async function generateStaticParams() {
@@ -35,6 +35,10 @@ export default async function ModelPage({ params, searchParams }: Props) {
   const { slug } = params;
   const catalog = searchParams?.catalog;
   const model = await getModel(slug, catalog);
+
+  if (!model) {
+    notFound();
+  }
 
   return <ClientModelPage model={model} />;
 }
