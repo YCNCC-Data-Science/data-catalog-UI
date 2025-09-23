@@ -52,7 +52,7 @@ export const Manuscripts: React.FC<{ model: Model }> = ({ model }) => {
       </Text>
 
       <Box as="ol" sx={{ listStyle: "none", pl: 0, m: 0 }}>
-        {manuscripts.map((m, i) => (
+        {manuscripts.map((m) => (
           <Box
             as="li"
             key={m.doi}

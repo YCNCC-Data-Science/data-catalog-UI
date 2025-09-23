@@ -19,7 +19,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({ url, color, tags }) => {
     >
       <Box
         as="img"
-        // @ts-ignore
+        // @ts-expect-error
         src={url}
         sx={{
           position: "absolute",

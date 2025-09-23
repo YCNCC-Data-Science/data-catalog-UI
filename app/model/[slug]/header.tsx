@@ -16,7 +16,7 @@ export const ModelHeader: React.FC<{ model: Model }> = ({ model }) => {
     >
       <Box
         as="img"
-        // @ts-ignore
+        // @ts-expect-error
         src={model.thumbnail}
         alt={`${model.title} thumbnail`}
         sx={{

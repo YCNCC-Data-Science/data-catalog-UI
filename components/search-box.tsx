@@ -8,11 +8,7 @@ interface SearchBoxProps {
   setSearch: (value: string) => void;
 }
 
-export const SearchBox: React.FC<SearchBoxProps> = ({
-  sx,
-  search,
-  setSearch,
-}) => {
+export const SearchBox: React.FC<SearchBoxProps> = ({ search, setSearch }) => {
   return (
     <Container sx={{ mt: 5 }}>
       <Box

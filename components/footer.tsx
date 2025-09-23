@@ -24,7 +24,7 @@ export const Footer = () => {
       >
         <IconButton
           as="a"
-          // @ts-ignore
+          // @ts-expect-error
           href="https://www.linkedin.com/company/ycncc"
           sx={{ mx: 2 }}
         >
@@ -33,7 +33,7 @@ export const Footer = () => {
 
         <IconButton
           as="a"
-          // @ts-ignore
+          // @ts-expect-error
           href="https://github.com/YCNCC-Data-Science"
           sx={{ mx: 2 }}
         >
@@ -42,7 +42,7 @@ export const Footer = () => {
 
         <IconButton
           as="a"
-          // @ts-ignore
+          // @ts-expect-error
           href="https://naturalcarboncapture.yale.edu/"
           sx={{ mx: 2 }}
         >

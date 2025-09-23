@@ -2,13 +2,9 @@
 
 import { License } from "@/components/feedstock/license";
 import { Repository } from "@/components/feedstock/repository";
-import { AccessLink } from "@/components/feedstock/access-link";
 import { Maintainers } from "@/components/feedstock/maintainers";
 import { Model } from "@/types/types";
 import { Box, Grid, Text } from "theme-ui";
-
-//  Maintainers,
-//  Providers,
 
 export const ModelDetails: React.FC<{ model: Model }> = ({ model }) => {
   return (

@@ -1,10 +1,10 @@
 "use client";
 import { BackButton } from "@/components/back-button";
-import { Feedstock } from "@/types/types";
+import { Dataset } from "@/types/types";
 import { alpha } from "@theme-ui/color";
 import { Box, Container } from "theme-ui";
 
-export const DatasetHeader: React.FC<{ feedstock: Feedstock }> = ({
+export const DatasetHeader: React.FC<{ feedstock: Dataset }> = ({
   feedstock,
 }) => {
   return (
@@ -18,7 +18,7 @@ export const DatasetHeader: React.FC<{ feedstock: Feedstock }> = ({
     >
       <Box
         as="img"
-        // @ts-ignore
+        // @ts-expect-error
         src={feedstock.thumbnail}
         alt={`${feedstock.title} thumbnail`}
         sx={{

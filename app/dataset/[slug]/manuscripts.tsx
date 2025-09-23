@@ -1,6 +1,6 @@
 "use client";
 
-import { Feedstock } from "@/types/types";
+import { Dataset } from "@/types/types";
 import { Box, Text, Link } from "theme-ui";
 
 function formatAuthors(authors: string[]) {
@@ -20,10 +20,9 @@ function formatAuthors(authors: string[]) {
   );
 }
 
-export const Manuscripts: React.FC<{ feedstock: Feedstock }> = ({
+export const Manuscripts: React.FC<{ feedstock: Dataset }> = ({
   feedstock,
 }) => {
-  // Example list of manuscripts – you could pass this in via feedstock
   const manuscripts = feedstock.publications;
   return (
     <Box sx={{ mt: 4 }}>
@@ -55,7 +54,7 @@ export const Manuscripts: React.FC<{ feedstock: Feedstock }> = ({
       </Text>
 
       <Box as="ol" sx={{ listStyle: "none", pl: 0, m: 0 }}>
-        {manuscripts.map((m, i) => (
+        {manuscripts.map((m) => (
           <Box
             as="li"
             key={m.doi}
