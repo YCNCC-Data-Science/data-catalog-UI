@@ -1,5 +1,6 @@
 # YCNCC Data Catalog
 
+![GitHub deployments](https://img.shields.io/github/deployments/YCNCC-Data-Science/data-catalog-UI/production?label=vercel)
 [![License:MIT](https://img.shields.io/badge/License-MIT-lightgray.svg?style=flt-square)](https://opensource.org/licenses/MIT)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/YCNCC-Data-Science/data-catalog-UI/discussions)
 
