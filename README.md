@@ -16,7 +16,7 @@ npm run dev
 
 Then open `http://localhost:3000` in your browser.
 
-The catalog itself is managed in the [ycncc-data-science/data-catalog](https://github.com/YCNCC-Data-Science/data-catalog) repository. Dataset and model catalogs are fetched with:
+The catalog is managed in the [ycncc-data-science/data-catalog](https://github.com/YCNCC-Data-Science/data-catalog) repository. Dataset and model catalogs are fetched with:
 
 - `utils/get-datasets.ts`
 - `utils/get-models.ts`
