@@ -6,7 +6,6 @@ import { transparentize } from "@theme-ui/color";
 interface BadgeProps {
   sx?: ThemeUIStyleObject & { color?: string };
   children: ReactNode;
-  [key: string]: any;
 }
 
 const Badge: React.FC<BadgeProps> = ({ sx: customSx, children, ...props }) => {
