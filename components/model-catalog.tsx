@@ -2,7 +2,7 @@
 
 import { ModelCard } from "@/components/model-card";
 import { TagFilter } from "@/components/tag-filter";
-import { Feedstock } from "@/types/types";
+import { Model } from "@/types/types";
 import { Suspense, useMemo, useState } from "react";
 import { Box, Text, Container, Grid } from "theme-ui";
 import { SearchBox } from "@/components/search-box";
@@ -13,7 +13,7 @@ const FeedstockList = ({
   tags,
   catalog,
 }: {
-  feedstocks: Feedstock[];
+  feedstocks: Model[];
   search: string;
   tags: string[];
   catalog?: string;
@@ -29,7 +29,7 @@ const FeedstockList = ({
       const re = new RegExp(search, "i");
 
       result = result.filter(
-        (d: Feedstock) =>
+        (d: Model) =>
           d.title.match(re) ||
           d.tags?.some((tag) => tag.match(re)) ||
           d.description.match(re)
@@ -37,7 +37,7 @@ const FeedstockList = ({
     }
 
     if (tags.length > 0) {
-      result = result.filter((d: Feedstock) =>
+      result = result.filter((d: Model) =>
         tags.find((tag) => d.tags?.includes(tag))
       );
     }
@@ -67,7 +67,7 @@ const FeedstockList = ({
 };
 
 type CatalogProps = {
-  feedstocks: Feedstock[];
+  feedstocks: Model[];
   error?: Error;
   catalog?: string;
 };
