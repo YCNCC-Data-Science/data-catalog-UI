@@ -40,11 +40,12 @@ export const Header = () => {
 
       <Box
         sx={{
-          position: "absolute",
-          left: "50%",
-          transform: "translateX(-50%)",
+          position: ["static", "absolute"],
+          left: [null, "50%"],
+          transform: [null, "translateX(-50%)"],
           display: "flex",
           gap: 4,
+          ml: ["auto", "0"],
         }}
       >
         <Link href="/" style={{ textDecoration: "none" }}>
