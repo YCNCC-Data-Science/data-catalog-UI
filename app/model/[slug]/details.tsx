@@ -29,14 +29,14 @@ export const ModelDetails: React.FC<{ model: Model }> = ({ model }) => {
         sx={{ my: 3 }}
       >
         <Box>
+          <Repository metaURL={model.repository} />
+        </Box>
+
+        <Box>
           <License
             license={model.license?.name}
             license_link={model.license?.url}
           />
-        </Box>
-
-        <Box>
-          <Repository metaURL={model.repository} />
         </Box>
 
         <Box>
